@@ -68,7 +68,7 @@ S = np.column_stack((X,Y))
 print("S.shape")
 print(S.shape)
 
-""" Exercice 1 Observez les données """
+""" Exercice 1 Observons les données """
 
 print("Exercice 1 ")
 
@@ -76,7 +76,7 @@ print("Exercice 1 ")
 
 print (" En observant les données on voit bien que les classes ne sont pas équilibrées, elles n'ont pas toutes le même effectif. ")
 
-""" Pouvez-vous expliquer pourquoi, en regardant la manière dont a été construit ce jeu de don-
+""" Pouvons-nous expliquer pourquoi, en regardant la manière dont a été construit ce jeu de don-
 nées ? """
 
 print(" En effet elles n'ont pas toutes le même effectif car chaque lettres sont extraites des mots et certains mots sont utilisés plus souvent que d'autres ce qui explique que certaines lettres reviennent plus souvent que d'autres.Ce qui fait que les classes ont de differents effectifs ")
@@ -94,7 +94,7 @@ print(" Si un classifieur répondait systématiquement n, son taux d'erreur sera
 
 print("Exercice 2")
 
-""" Séparez les données en un ensemble d’apprentissage (90%) et un ensemble de test (10%)  """
+""" Séparons les données en un ensemble d’apprentissage (90%) et un ensemble de test (10%)  """
 
 def split_train_test(S, size = 0.1):
     S_learn = []
@@ -109,7 +109,7 @@ def split_train_test(S, size = 0.1):
 
 S_train, S_test = split_train_test(S, size = 0.1)
 
-""" Construisez un classifieur linéaire (on pourra considérer la loss -log-vraisemblance) que vous
+""" Construisons un classifieur linéaire (nous pourrons considérer la loss -log-vraisemblance) que nous
 apprendrez sur l’ensemble d’apprentissage """
 
 def softmax(v):
@@ -177,7 +177,7 @@ print(nb_error(T_sol, S_test)/S_test.shape[0])
 
 print("Exercice 3")
 
-""" Même questions que précédement, avec un réseau de neurones à 1 couche cachée. Vous testerez les configurations suivantes:  """
+""" Même questions que précédement, avec un réseau de neurones à 1 couche cachée. Nous testerons les configurations suivantes:  """
 
 """ Couche cachée à 10, 20, et 30 neurones """
 
