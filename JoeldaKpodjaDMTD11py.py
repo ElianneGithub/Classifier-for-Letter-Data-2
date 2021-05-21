@@ -6,14 +6,7 @@ Created on Thu Apr 15 20:41:04 2021
 @author: joelda
 """
 
-""" Bonjour Monsieur 
-J'ai quelques précisions à apporter au niveau de mon devoir.
-En effet mon logiciel Python me donne systématiquement 0 pour les taux d'erreurs, ce qui n'est pas normal.
-Personnellement je travaille sur Macbook et il semblerait qu'on soit plusieurs à avoir eu quelques souçis dont celui là.
-J'ai donc changé d'ordinateur et le même code m'a donné les bons résultats pour les taux d'erreurs.
-Donc je ne sais pas si vous utiliserez également un Macbook pour corriger les devoirs mais il se peut que les 
-mêmes problèmes se posent.
- Merci de votre compréhension """
+
   
 
 import matplotlib.pyplot as plt
@@ -75,16 +68,16 @@ S = np.column_stack((X,Y))
 print("S.shape")
 print(S.shape)
 
-""" Exercice 1 Observez les données """
+""" Exercice 1 Observez les données """
 
 print("Exercice 1 ")
 
-""" Les classes sont-elles équilibrées (i.e toutes les classes ont le même effectif) ? """
+""" Les classes sont-elles équilibrées (i.e toutes les classes ont le même effectif) ? """
 
 print (" En observant les données on voit bien que les classes ne sont pas équilibrées, elles n'ont pas toutes le même effectif. ")
 
-""" Pouvez-vous expliquer pourquoi, en regardant la manière dont a été construit ce jeu de don-
-nées ? """
+""" Pouvez-vous expliquer pourquoi, en regardant la manière dont a été construit ce jeu de don-
+nées ? """
 
 print(" En effet elles n'ont pas toutes le même effectif car chaque lettres sont extraites des mots et certains mots sont utilisés plus souvent que d'autres ce qui explique que certaines lettres reviennent plus souvent que d'autres.Ce qui fait que les classes ont de differents effectifs ")
 
@@ -92,7 +85,7 @@ print(" En effet elles n'ont pas toutes le même effectif car chaque lettres son
 
 print("L'effectif de la classe correspondant au n est de 5024 ")
 
-""" En supposant qu’un classifieur réponde systématiquement ‘n’, quelle serait son taux d’erreur ? """
+""" En supposant qu’un classifieur réponde systématiquement ‘n’, quelle serait son taux d’erreur ? """
 
 print(" Si un classifieur répondait systématiquement n, son taux d'erreur serait environ de 90%")
 
@@ -101,7 +94,7 @@ print(" Si un classifieur répondait systématiquement n, son taux d'erreur sera
 
 print("Exercice 2")
 
-""" Séparez les données en un ensemble d’apprentissage (90%) et un ensemble de test (10%)  """
+""" Séparez les données en un ensemble d’apprentissage (90%) et un ensemble de test (10%)  """
 
 def split_train_test(S, size = 0.1):
     S_learn = []
@@ -116,7 +109,7 @@ def split_train_test(S, size = 0.1):
 
 S_train, S_test = split_train_test(S, size = 0.1)
 
-""" Construisez un classifieur linéaire (on pourra considérer la loss -log-vraisemblance) que vous
+""" Construisez un classifieur linéaire (on pourra considérer la loss -log-vraisemblance) que vous
 apprendrez sur l’ensemble d’apprentissage """
 
 def softmax(v):
@@ -184,9 +177,9 @@ print(nb_error(T_sol, S_test)/S_test.shape[0])
 
 print("Exercice 3")
 
-""" Même questions que précédement, avec un réseau de neurones à 1 couche cachée. Vous testerez les configurations suivantes:  """
+""" Même questions que précédement, avec un réseau de neurones à 1 couche cachée. Vous testerez les configurations suivantes:  """
 
-""" Couche cachée à 10, 20, et 30 neurones """
+""" Couche cachée à 10, 20, et 30 neurones """
 
 Nin = 128
 Nout = 26
